@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>display实现垂直居中</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #cc2b39;
+			}
+			/*//1.display: flex兼容到ie10+*/
+			/*.box{
+				height: 300px;
+				width: 300px;
+				border: 2px solid #fff;
+				margin: 20px auto;
+				display: flex;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				align-items: center;
+			}
+			span{
+				width: auto;
+				height: auto;
+				display:block;
+				background: #211c1c;
+				color: #fff;
+				text-align: center;
+				font-size: 14px;
+				margin: 0 auto;
+			}*/
+			/*//1.display: table兼容到ie7+*/
+			.box{ 
+				display:table-cell; 
+				width:200px; 
+				height:200px; 
+				border:2px solid #ccc; 
+				text-align:center; 
+				*font-size:178px; 
+				zoom:1; 
+				vertical-align:middle;
+			}
+			span{ 
+				display:table;
+				margin: 0 auto;
+				}
+		</style>
+	</head>
+	<body>
+		<!--1-->
+		<!--<div class="box">
+			<div class="help"></div>
+			<span><img src="img/1.png"/></span>
+		</div>-->
+		
+		<!--2-->
+		<div class="box">
+			<span><img src="img/1.png"/></span>
+		</div>
+		<!--//总结：
+		//利用了弹性盒子属性进行了居中，-->
+	</body>
+</html>
